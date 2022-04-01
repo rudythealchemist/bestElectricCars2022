@@ -1,0 +1,453 @@
+/* Global styles */
+
+/* FIX HERO TEXT OVERLAPPING NAVBAR */
+/* SCROLL BTNS SPACE */
+*{
+    box-sizing: border-box;
+}
+body{
+    /* changes browser default settings */
+    margin: 0 auto;
+    padding: 0;
+    width: 90vw;
+    /* position: relative; */
+}
+:root{
+    --blue: #295ab4;
+    --white: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+/* OVERLAY + Modal */
+.overlay {
+    z-index: -100;
+    align-content: center;
+    position: fixed; /* Sit on top of the page content */
+    visibility: hidden;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    display: grid;/*makes overlay cover entire screen;*/
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+    /* cursor: pointer; Add a pointer on hover */
+    overflow-x: hidden;
+    overflow-x: visible; 
+}
+
+.show-overlay {
+    z-index:100;
+    visibility: visible; 
+}
+
+/* close modal class */
+
+/* MODAL NOT APPLIED */
+/* Modal Content/Box */
+.modal-container {
+    /* visibility:hidden; */
+    z-index:-100;
+    border-radius:15px;
+    position: relative;
+    background:var(--white);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 40vh;
+    min-width:50vw; /* Could be more or less, depending on screen size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* transition: all 0.10s ease-in-out; */
+}
+button.close-btn{
+    font-weight: bold;
+    background:none;
+    width:3px;
+    height: 3px;
+    border:none;
+    
+}
+
+/* The Close modal Button */
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    color: var(--blue);
+    font-size: 28px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    transition: transform .7s ease-in-out;
+
+    /* transition: all 0.10s ease-in-out; */
+}
+.close-btn:hover{
+    color:burlywood;
+    transform: scale(1.1);
+    transition: all 0.10s ease-in-out;
+    cursor: pointer;
+}
+
+button.modal-btn{
+    margin-top:2rem;
+    font-weight: bold;
+    color: var(--white);
+    border-radius:15px;
+    width: 10rem;
+    height: 2rem;   
+    background:var(--blue);
+    border:none;
+}
+button.modal-btn:hover{
+    color:burlywood;
+    transform: scale(1.1);
+    transition: all 0.10s ease-in-out;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+/* form hidder until overlay fires */
+/* .form{
+    height: 50vh;
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
+    overflow: hidden;
+
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: (white);
+    /* background-image: url('./img/magnifying-glass-solid.svg'); */
+    /* background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+} */ 
+/* button hidden should show in overlay */
+.overlay-btn{
+    top: 0;
+    right: 0;
+    position: absolute;
+    display:none;
+    overflow: hidden;
+}
+/* Hide sidenav + burger icon on large screens */
+div.burger-icon,.sidenav{
+    display: none;
+    width: 0;
+}
+
+/* /* NAV BAR + FOOTER */
+.nav{
+    background:var(--white);
+    min-height: 5rem;
+    /* height: 10vh; */
+    position: sticky;
+    top: 0px ;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 0;
+    margin:0 auto;
+
+}
+/* full width nav, padding removes with space,margin 0 removes margin and center align items*/
+
+.footer{
+    background: var(--white);
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    min-height: 5rem;
+
+}
+/*
+ul li{
+    list-style: none;
+} */
+
+/* FA ICONS */
+
+.fa-solid, .fa-brands,.fa-rectangle-xmark{
+    font-size:2rem;
+    display:inline;
+    color:var(--blue);
+    transition: all 0.5s ease-in-out;
+
+}
+.fa-solid:hover, .fa-brands:hover{
+    color:burlywood;
+}
+
+a{
+    text-decoration:none;
+    font-size:1.2rem;
+}
+
+a:hover{
+    color:burlywood;
+    transform: scale(1.1);
+    transition: 0.3s;;
+}
+a:visited{
+    color:black;
+}
+
+/*======
+MAIN
+=======*/
+
+.main{
+    width:90vw;
+    height: auto;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    /* hides overflowing contents */
+    overflow: hidden;
+}
+
+
+/*=========
+HERO
+=========*/
+
+.hero-container{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    height: 90vh;
+    /* text-align:center; */
+    background-image: url("./img/herocar.jpg") cover no-repeat;
+}
+
+.hero-container img{
+    /* add contrast to img */
+    filter:contrast(150%);
+    width:  90vw;
+    margin:0;
+}
+
+/* =======
+SECTION
+========== */
+
+.section-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 1px;
+}
+.img-container{
+    height: 80vh;
+}
+
+.section-img{
+    width:60vw;
+    height:70vh;
+    padding-top: 1rem;
+}
+
+.scroll-btns-container{
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 10rem;
+}
+.fa-square-caret-right,.fa-square-caret-left,.fa-shuffle{
+    font-size:2.5rem;
+    display:inline;
+    color:var(--blue);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+}
+
+h1{
+    color: white;
+    /* background: -webkit-linear-gradient(left,var(--white), var(--blue)); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    background-position: center;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    margin:1rem;
+    transform: translate(-50%, -50%);
+}
+
+h2,h3{
+    text-align: center;
+}
+/* h2 */
+#award{
+    margin-top:1rem;
+}
+p{
+    line-height:1.5rem;
+}
+/* span{
+    color:var(--blue);
+} */
+
+/*======
+MEDIA QUERY
+========*/
+
+@media only screen and (max-width:768px) {
+    /* burger-icon icons, appears at this screen size */
+
+/*=====
+NAV
+ ====== */
+ /* hide nav elements from large screens */
+
+
+.nav .nav-li{
+    position:relative;
+    /* position: relative */
+    display:none;
+    /* margin: 0 auto; */
+}
+/* logo */
+.fa-car{
+    font-size:2.5rem;
+    display:inline;
+    color:var(--blue);
+    position: relative;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+
+}
+
+/* burger-icon menu */
+.nav div.burger-icon{
+    padding:0;
+    margin:0;
+    display:block;
+    width:2.5rem;
+    cursor:pointer;
+    /* transition: 0.4s; */
+    z-index:1;
+    transition: all 0.10s ease-in-out;
+}
+
+/* burger menu styling */
+
+.menu{
+    background:var(--blue);
+    height: 6px;
+    margin: 6px  auto; /*removes margin right of element,uses entire navbar */
+    width: 30px;
+    cursor:pointer;
+    transition: 0.20s; /* 0.5 second transition effect to slide in the sidenav */
+    transform: rotate(180deg);
+}
+
+/* animation for burger menu when clicked */
+.open .first {
+    height: 6px;
+    -webkit-transform: rotate(-45deg) translate(-6px, 7px);
+    transform: rotate(-45deg) translate(-2px, 6px);
+    transition: 0.10s;
+}
+
+.open .second {
+    opacity: 0;
+    display: none;
+}
+.open .third{
+    height: 6px;
+    -webkit-transform: rotate(45deg) translate(-6px, -7px);
+    transform: rotate(45deg) translate(-2px, -7px);
+    transition: 0.10s;
+}
+
+
+
+.sidenav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:space-evenly;
+    background:var(--blue);
+    height:100vh;
+    width:80%;
+    top:0;
+    left:0%;
+    transform:translateX(-100%);
+    /* visibility: hidden; */
+    /* display:none; */
+    /* padding-top: 20px; */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* Toggle sidenav open */
+.showSidenav{
+    transform: translate(0);
+}
+
+.sidenav a,.fa-magnifying-glass{
+    color:var(--white);
+    font-size:1.5rem;
+    transition: 0.3s;
+
+}
+
+/* ======
+MAIN
+======*/
+.hero-container{
+    display:none;
+}
+/* hides hero image in small screens */
+h1{
+    color:var(--blue);
+    position: relative;
+    top:15px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2,h3,.section{
+    margin:0;
+    padding: 0;
+}
+.img-container{
+    width: 90vw;
+}
+.section-img{
+    width:100%;
+}
+/* FOOTER */
+.footer{
+    width:90vw;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+.footer a {
+    margin-right: 6px;
+}
+}
+/* Make project mobile friendly */

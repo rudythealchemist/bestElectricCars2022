@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.sb-e884168f-DyjzNH" type="image/png">
+
+    <!-- font awesone cdn -->
+    <script src="https://kit.fontawesome.com/2c4fa0eef1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Best Electric cars of 2022</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="fixed" class="nav">
+        <!-- logo on left side -->
+        <i class="fa-solid fa-car"><a href="./index.html"></a></i>
+        <!-- nav element on right side -->
+        <a href="#" class="nav-li ">Home</a>
+        <a href="#" class="nav-li ">Videos</a>
+        <a href="#" class="nav-li ">New</a>
+        <a href="#" class="nav-li ">Research</a>
+        <a href="#" class="nav-li ">About us</a>
+        <!-- <a href="#" class="nav-li "><i class="fa-solid fa-magnifying-glass"></i></a> -->
+        <form class="nav-li">
+            <input type="text" name="search" placeholder="Search..">
+        </form>
+        <!-- Burger menu -->
+        <div class="burger-icon" id="burger-icon" data-toggle="open">
+            <div class="menu first"></div>
+            <div class="menu second"></div>
+            <div class="menu third"></div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sidenav" toggleAttribute="show-solid" data-toggle="show-overlay">
+            <a href="#" class="mobile-li ">Home</a>
+            <a href="#" class="mobile-li ">Videos</a>
+            <a href="#" class="mobile-li ">New</a>
+            <a href="#" class="mobile-li ">Research</a>
+            <a href="#" class="mobile-li ">About us</a>
+            <a href="#" class="mobile-li "><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <!-- add overlay -->
+    <div class="overlay" data-toggle="overlay" id="overlay">
+        <div id="modal" class="modal-container">
+            <button class="close-btn">
+                <i class="fa-thin fa-x"></i>
+            </button>
+            <h2>Sign up for our weekly news letter!</h2>
+            <button class="modal-btn">Click here to start!</button>
+            <!-- form in overlay -->
+            <!-- <form action="/action.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" value="Rudy"><br><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" value="Henry"><br><br>
+                <input type="submit" value="Submit">
+            </form> -->
+        </div>
+    </div>
+    <!-- MAIN -->
+    <div class="main">
+        <h1 class="gradient">Best Electric cars of 2022</h1>
+        <div class="hero-container">
+            <img src="./img/herocar.jpg" alt="hyundai">
+        </div>
+        <!-- SECTION -->
+        <div class="section">
+            <h2><span>What’s eligible:</span></h2>
+            <p class="section-p"> Any model-year 2022 battery-electric vehicle regardless of when it was
+                introduced or
+                last updated.</p>
+            <h2><span>Criteria:</span></h2>
+            <p class=" section-p">In addition to overall excellence, we pay extra attention to the aspects with
+                which
+                many
+                EVs stumble, such
+                as
+                ride quality and charging speed.</p>
+            <div class="section-container">
+                <div class="img-container">
+                    <img src="./img/tesla_y.webp" id="e-car" class="section-img" alt="tesla model y">
+                    <div class="scroll-btns-container">
+                        <!-- scroll left -->
+                        <i class="fa fa-solid fa-square-caret-left"></i>
+                        <!-- randomBtn -->
+                        <i id="random" class="fa-solid fa-shuffle"></i>
+                        <!-- scroll right -->
+                        <i class="fa fa-solid fa-square-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="article-container">
+                <h2 id="award"><span>Winner: 2022 Tesla Model Y</span></h2>
+                <p id="info">Cars.com’s inaugural Best Electric Vehicle award comes at a time
+                    when
+                    the
+                    availability of
+                    mass-market
+                    EVs is closer than
+                    ever to a tipping point. General adoption is still distant because the challenges that limit
+                    accessibility — such as
+                    affordability, truly fast public charging, education about range and more — haven’t been solved,
+                    but
+                    new
+                    EVs are popping
+                    up left and right, including several late additions that weren’t available for this year’s
+                    voting
+                    (Hyundai Ioniq 5, Kia
+                    EV6, Lucid Air and Rivian R1T among them). Dozens more models are waiting in the wings.</p>
+            </div>
+            <!-- use font awsome cdn for button -->
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer">
+        <!-- social media buttons -->
+        <a href="#"><i class="fa fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+        <a href="#">Terms of service</a>
+        &copy; 2022 Cars.com. All rights reserved
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
