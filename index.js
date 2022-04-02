@@ -32,6 +32,7 @@ const cars = [
 
 // Buttons nav + sidebar nav+ overlay
 const closeOverlayBtn = document.querySelector('.close-btn');
+const modal = document.querySelector('.modal-container');
 const overlay = document.querySelector('.overlay');
 const burgerBtn = document.querySelector('.burger-icon');//burger menu
 const sideNav = document.querySelector('.sidenav');//sidenav
@@ -80,10 +81,11 @@ function timer() {
 }
 setTimeout(timer, 10000);
 // close modal btn
-closeOverlayBtn.addEventListener('click', () => {
+overlay.addEventListener('click', () => {
     // overlay.classList.contains('show-overlay');
-    overlay.classList.toggle('overlay');
-    overlay.classList.toggle('show-overlay');
+    overlay.classList.remove('overlay');
+    overlay.classList.add('hide-modal');
+    // modal.classList.toggle('overlay');
 });
 
 
