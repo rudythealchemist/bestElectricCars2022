@@ -3,8 +3,8 @@ const cars = [
     {
         id: 0,
         award: 'Winner: 2022 Tesla Model Y',
-        img: 'http://127.0.0.1:5500/electricCars/img/tesla_y.webp',
-        model: 'Mustang Mach-E',
+        img: 'https://cdn.motor1.com/images/mgl/QeWXzN/s4/tesla-model-y-performance-mic-in-china---november-2021.webp',
+        model: 'Tesla Model Y',
         info: 'Cars.com’s inaugural Best Electric Vehicle award comes at a time when the availability of mass-market EVs is closer than ever to a tipping point. General adoption is still distant because the challenges that limit accessibility — such as affordability, truly fast public charging, education about range and more — haven’t been solved, but new EVs are popping up left and right, including several late additions that weren’t available for this year’s voting (Hyundai Ioniq 5, Kia EV6, Lucid Air and Rivian R1T among them). Dozens more models are waiting in the wings.',
     },
     {
