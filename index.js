@@ -3,8 +3,8 @@ const cars = [
     {
         id: 0,
         award: 'Winner: 2022 Tesla Model Y',
-        img: 'http://127.0.0.1:5500/electricCars/img/tesla_y.webp',
-        model: 'Mustang Mach-E',
+        img: 'https://cdn.motor1.com/images/mgl/QeWXzN/s4/tesla-model-y-performance-mic-in-china---november-2021.webp',
+        model: 'Tesla Model Y',
         info: 'Cars.com’s inaugural Best Electric Vehicle award comes at a time when the availability of mass-market EVs is closer than ever to a tipping point. General adoption is still distant because the challenges that limit accessibility — such as affordability, truly fast public charging, education about range and more — haven’t been solved, but new EVs are popping up left and right, including several late additions that weren’t available for this year’s voting (Hyundai Ioniq 5, Kia EV6, Lucid Air and Rivian R1T among them). Dozens more models are waiting in the wings.',
     },
     {
@@ -32,25 +32,23 @@ const cars = [
 
 // Buttons nav + sidebar nav+ overlay
 const closeOverlayBtn = document.querySelector('.close-btn');
-const modal = document.querySelector('.modal-container');
 const overlay = document.querySelector('.overlay');
 const burgerBtn = document.querySelector('.burger-icon');//burger menu
 const sideNav = document.querySelector('.sidenav');//sidenav
 const closeBtn = document.querySelectorAll('.menu');//close menu
-// const mobileLi = document.querySelectorAll('.mobile-li');
 const logo = document.querySelector('.fa-solid');//nav logo
 
 
 
 //Scroll btns
 const prevBtn = document.querySelector('.fa-square-caret-left');
+const randBtn = document.getElementById('random');
 const nextBtn = document.querySelector('.fa-square-caret-right');
 
 //select items
 const img = document.getElementById('e-car');
 const award = document.getElementById('award');
 const info = document.getElementById('info');
-const randBtn = document.getElementById('random');
 
 // burger meu button
 burgerBtn.addEventListener('click', () => {
@@ -75,13 +73,13 @@ burgerBtn.addEventListener('click', () => {
 });
 
 
-// Modal on timer
+// Modal on timer + close btn
 function timer() {
     overlay.classList.add('show-overlay');
 }
 setTimeout(timer, 10000);
 // close modal btn
-overlay.addEventListener('click', () => {
+closeOverlayBtn.addEventListener('click', () => {
     // overlay.classList.contains('show-overlay');
     overlay.classList.remove('overlay');
     overlay.classList.add('hide-modal');
